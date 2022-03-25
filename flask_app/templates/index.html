@@ -8,26 +8,34 @@
    <title>Dojos</title>
 </head>
 <body>
-   <div class="container mt-5 d-flex">
-      <div class="card">
-         <div class="card-header">
+   <div class="container d-flex justify-content-between">
+      <div class="card m-5 col-4">
+         <div class="card-header text-center fs-3 fw-bold">
          Add A Dojo
          </div>
          <div class="card-body">
-         <h5 class="card-title">Special title treatment</h5>
-         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-         <a href="#" class="btn btn-primary">Go somewhere</a>
+            <form action="">
+               <div class="mb-3 d-flex flex-column">
+                  <label for="city" class="form-label">City:</label>
+                  <input type="text" class="mb-2"name="city" id="">
+                  <input type="submit" class="btn btn-primary w-25 ps-2 pe-2"value="Add">
+               </div>
+
+            </form>
          </div>
       </div>
 
-      <div class="card">
-         <div class="card-header">
-         Featured
+      <div class="card m-5 col-6">
+         <div class="card-header text-center fs-3 fw-bold">
+         All Dojos
          </div>
-         <div class="card-body">
-         <h5 class="card-title">Special title treatment</h5>
-         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-         <a href="#" class="btn btn-primary">Go somewhere</a>
+            <table class="table table-borderless text-center mt-3 fs-4">
+               <tbody>
+                  <tr>
+                     <td>Seattle</td>
+                  </tr>
+               </tbody>
+            </table>
          </div>
       </div>
    </div>
