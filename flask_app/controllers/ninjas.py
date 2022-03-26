@@ -17,3 +17,4 @@ def save_ninja():
    return redirect('/')
 
 
+

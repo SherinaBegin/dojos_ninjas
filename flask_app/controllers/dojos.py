@@ -24,7 +24,7 @@ def show_dojo(id):
    data = {
       'id': id
    }
-   return render_template('show_dojo.html', dojo = Dojo.get_one(data))
+   return render_template('show_dojo.html', dojo=Dojo.get_dojo_with_ninjas(data))
 
 @app.route('/dojo/delete/<int:id>')
 def delete_dojo(id):
