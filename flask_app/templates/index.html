@@ -17,7 +17,7 @@
          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                <a class="nav-link active" aria-current="page" href="#">Home</a>
-               <a class="nav-link" href="#">Add a Ninja</a>
+               <a class="nav-link" href="/ninjas">Add a Ninja</a>
 
             </div>
          </div>
@@ -30,30 +30,30 @@
          Add A Dojo
          </div>
          <div class="card-body p-4">
-            <form action="">
+            <form action="/dojo/create" method="post">
                <div class="mb-3 d-flex flex-column">
                   <label for="city" class="form-label">City:</label>
-                  <input type="text" class="mb-2"name="city" id="">
-                  <input type="submit" class="btn btn-primary w-25 ps-2 pe-2"value="Add">
+                  <input type="text" class="mb-2" name="city">
+                  <input type="submit" class="btn btn-primary w-25 ps-2 pe-2" value="Add">
                </div>
 
             </form>
          </div>
       </div>
 
-      <div class="card m-5 col-6">
-         <div class="card-header text-center fs-3">
+   <div class="card m-5 col-6">
+      <div class="card-header text-center fs-3">
          All Dojos
-         </div>
-            <table class="table table-borderless text-center mt-3 fs-4">
-               <tbody>
-                  <tr>
-                     <td><a href="">Seattle</a></td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
       </div>
+      <table class="table table-borderless text-center mt-3 fs-4">
+         <tbody>
+            {% for dojo in dojos %}
+            <tr>
+               <td><a href="/dojo/{{dojo.id}}" value={{dojo.id}}>{{ dojo.city }}</a></td>
+            </tr>
+            {% endfor %}
+         </tbody>
+      </table>
    </div>
    
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
