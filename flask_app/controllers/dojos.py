@@ -34,8 +34,4 @@ def delete_dojo(id):
    Dojo.delete_dojo(data)
    return redirect('/dojos')
 
-@app.route('/ninjas')
-def ninjas():
-   dojos = Dojo.get_all()
-   print(dojos)
-   return render_template('add_ninja.html', dojos = dojos)
+

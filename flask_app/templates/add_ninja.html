@@ -27,7 +27,7 @@
          <div class="card-header text-center fs-3">
          New Ninja
          </div>
-         <form action="/ninjas/add" class="p-5 mx-auto w-100">
+         <form action="/ninjas/save" method='post' class="p-5 mx-auto w-100">
             <div class="mb-3">
                <select name="dojo_id" class="form-select">
                   <option selected>Select Dojo</option>
@@ -37,15 +37,15 @@
                </select>
             </div>
             <div class="mb-3 form-floating">
-               <input type="text" name="fname" class="form-control" id="floatingInput" placeholder="fname">
+               <input type="text" name="first_name" class="form-control" id="floatingInput" placeholder="fname">
                <label for="fname">First Name:</label>
             </div>
             <div class="mb-3 form-floating">
-               <input type="text" name="lname" class="form-control" id="floatingInput" placeholder="lname">
+               <input type="text" name="last_name" class="form-control" id="floatingInput" placeholder="lname">
                <label for="lname">Last Name:</label>
             </div>
             <div class="mb-3 form-floating">
-               <input type="number" name="age" class="form-control" id="floatingInputValue" placeholder="age">
+               <input type="number" name="age"  class="form-control" id="floatingInputValue" placeholder="age">
                <label for="age">Age:</label>
             </div>
             <input type="submit" value="Add Ninja" class="btn btn-primary w-50">

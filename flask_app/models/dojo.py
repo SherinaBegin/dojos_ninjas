@@ -1,4 +1,5 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask_app.models.ninja import Ninja
 
 class Dojo:
    def __init__(self, data):
@@ -19,7 +20,7 @@ class Dojo:
 
    @classmethod 
    def save_dojo(cls, data):
-      query = 'INSERT INTO dojos(city, created_at, updated_at) VALUES (%(city)s, NOW(), NOW());'
+      query = 'INSERT INTO dojos(city) VALUES (%(city)s);'
       result = connectToMySQL('dojos_and_ninjas').query_db(query, data)
       return result
 
